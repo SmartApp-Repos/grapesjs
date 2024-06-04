@@ -5,6 +5,9 @@
     <title>GrapesJS</title>
     <link rel="stylesheet" href="dist/css/grapes.min.css">
     <script src="grapes.min.js"></script>
+
+    <script src="./libs/blocks-basic.js"></script>
+    <script src="./libs/components-forms.js"></script>
     <style>
       body,
       html {
@@ -78,7 +81,7 @@
       </style>
     </div>
 
-    <script type="text/javascript">
+    <script type="text/javascript" type="module">
       var editor = grapesjs.init({
         showOffsets: 1,
         noticeOnUnload: 0,
@@ -86,6 +89,7 @@
         height: '100%',
         fromElement: true,
         storageManager: { autoload: 0 },
+        plugins: ['grapesjs-plugin-forms', 'gjs-blocks-basic'],
         styleManager : {
           sectors: [{
               name: 'General',
